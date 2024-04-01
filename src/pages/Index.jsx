@@ -91,6 +91,48 @@ const Index = () => {
       <Divider />
 
       <Box p={5}>
+        <Heading>Transformers</Heading>
+        <Text mt={2}>A brief introduction to the process of fine-tuning language models using Transformers.</Text>
+      </Box>
+
+      <Box p={5}>
+        <Heading size="md">1. Loading the Transformers Library</Heading>
+        <Text mt={2}>Normally, this would involve importing the necessary libraries in the backend code.</Text>
+      </Box>
+
+      <Box p={5}>
+        <Heading size="md">2. Loading the Model and Tokenizers</Heading>
+        <Button leftIcon={<FaCloudUploadAlt />} onClick={() => handleBackendProcess("Model Loading")}>
+          Load Model and Tokenizers
+        </Button>
+      </Box>
+
+      <Box p={5}>
+        <Heading size="md">3. Preparing the Datasets</Heading>
+        <Textarea placeholder="Paste dataset here" />
+        <Button mt={2} leftIcon={<FaCloudUploadAlt />} onClick={() => handleBackendProcess("Dataset Preparation")}>
+          Prepare Dataset
+        </Button>
+      </Box>
+
+      <Box p={5}>
+        <Heading size="md">4. Fine-Tuning</Heading>
+        <Button leftIcon={<FaPlay />} onClick={() => handleBackendProcess("Fine-Tuning")}>
+          Start Fine-Tuning
+        </Button>
+        <Progress mt={2} value={20} />
+      </Box>
+
+      <Box p={5}>
+        <Heading size="md">5. Saving the Fine-Tuned Model</Heading>
+        <Button leftIcon={<FaSave />} onClick={() => handleBackendProcess("Saving")}>
+          Save Model
+        </Button>
+      </Box>
+
+      <Divider />
+
+      <Box p={5}>
         <Heading size="md">Backend Inference API</Heading>
         {/* This is where you would configure the connection to a backend API for inference */}
         <Input placeholder="API Endpoint" />
